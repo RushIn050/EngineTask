@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EngineTaskShestakov", "EngineTaskShestakov.vcxproj", "{144C3072-C539-4ECF-86E8-1CB17053407B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{144C3072-C539-4ECF-86E8-1CB17053407B}.Debug|x64.ActiveCfg = Debug|x64
+		{144C3072-C539-4ECF-86E8-1CB17053407B}.Debug|x64.Build.0 = Debug|x64
+		{144C3072-C539-4ECF-86E8-1CB17053407B}.Debug|x86.ActiveCfg = Debug|Win32
+		{144C3072-C539-4ECF-86E8-1CB17053407B}.Debug|x86.Build.0 = Debug|Win32
+		{144C3072-C539-4ECF-86E8-1CB17053407B}.Release|x64.ActiveCfg = Release|x64
+		{144C3072-C539-4ECF-86E8-1CB17053407B}.Release|x64.Build.0 = Release|x64
+		{144C3072-C539-4ECF-86E8-1CB17053407B}.Release|x86.ActiveCfg = Release|Win32
+		{144C3072-C539-4ECF-86E8-1CB17053407B}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BAA8F3E9-26E4-410A-873E-29E9FB9A6BDC}
+	EndGlobalSection
+EndGlobal
