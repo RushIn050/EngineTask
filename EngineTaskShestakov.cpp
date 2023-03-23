@@ -1,6 +1,4 @@
-﻿
-
-#include "Engine.h"
+﻿#include "Engine.h"
 #include "InternalCombustionEngine.h"
 #include "StendForTest.h"
 #include <iostream>
@@ -10,19 +8,15 @@
 
 void PrintTimeTestResult(double res)
 {
-    if (res > 179000)
-        std::cout << "двигаетль не перегрелся\n";
-    else
-        std::cout << "двигатель перегрелся через:" << res << "секунд\n";
+    std::cout << "двигатель перегрелся через:  " << res << " секунд\n";
 }
 
 void TimeTest(int Tenv)
 {
-    std::shared_ptr<InternalCombustionEngine> ICEng {new InternalCombustionEngine (Tenv)};
-    std::shared_ptr<StendForTest> eng {new StendForTest (ICEng) };
-    PrintTimeTestResult(eng->setTimeHasWorked());
+    std::shared_ptr<InternalCombustionEngine> ICEng{ new InternalCombustionEngine(Tenv) };
+    std::shared_ptr<StendForTest> eng{ new StendForTest(ICEng) };
+    PrintTimeTestResult(eng->getTimeHasWorked());
 }
-
 
 
 int main()

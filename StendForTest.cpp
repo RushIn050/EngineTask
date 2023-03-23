@@ -2,43 +2,36 @@
 #include "InternalCombustionEngine.h"
 #include <windows.h>
 
-
-
-
-
 StendForTest::StendForTest(std::shared_ptr<Engine> engine)
 {
-	this->engine = engine;
+	test_engine = engine;
 }
 
+StendForTest::~StendForTest(){}
 
-StendForTest::~StendForTest()
+double StendForTest::getTimeHasWorked()
 {
+	stend();
+	return workedTime;
 }
 
-
-
-double StendForTest::setTimeHasWorked()
+void StendForTest::stend()
 {
-	if (engine != nullptr)
+	if (test_engine != nullptr)
 	{
-		std::thread thForEngine(&Engine::EngineStart, engine);
-		thForEngine.detach();
-		Sleep(3000); // 
-		/*while (engine->IsWorking())
+		std::thread thForEngine(&Engine::EngineStart, test_engine);
+		Sleep(2000);
+		while (test_engine->WorkingStatus())
 		{
-			std::cout << "temp" << engine->getEngineTemperature() << engine->getOverhatingTemperature() << std::endl;
-			if (engine->getEngineTemperature() > engine->getOverhatingTemperature())
-			{
-				engine->EngineStop();
-				std::cout << engine->getEngineTemperature();
-				return engine->getTimeHasWorked();
-			}
-		}*/ //не работает, IsWorking всегда отрицательна :(
-		engine->EngineStop();
-		return engine->getTimeHasWorked();
-	}
-	else
-	  return 6;
 
+			if (test_engine->getEngineTemperature() > test_engine->getOverhatingTemperature())
+			{
+				test_engine->EngineStop();
+				workedTime = test_engine->getTimeHasWorked();
+			}
+		}
+		thForEngine.detach();
+	}
 }
+
+

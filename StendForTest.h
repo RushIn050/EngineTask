@@ -6,10 +6,14 @@
 
 class StendForTest
 {
-	std::shared_ptr <Engine> engine ;
+	double workedTime = 0.0;
+	std::shared_ptr <Engine> test_engine;
+	void stend();
+
 public:
-	StendForTest (std::shared_ptr <Engine> eng);
+	StendForTest(std::shared_ptr <Engine> eng);
 	~StendForTest();
-	double setTimeHasWorked();
+	double getTimeHasWorked();
 };
+
 
